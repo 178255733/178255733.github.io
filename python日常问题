@@ -1,0 +1,15 @@
+1.python3的pandas读取中文文件报错
+data = pd.read_csv('D:/code/data/rating22.csv')
+
+报错：
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc9 in position 0: invalid continuation byte
+
+解决方式：
+用notepad++打开这个文件，将文件用Unicode编码重新保存，比如utf-8。
+
+
+2.python3的pandas读取中文路径报错
+
+常规：pd.read_csv('d:/中文/中文.csv')
+
+解决方式：pd.read_csv(open(r'd:/中文/中文.csv'))
